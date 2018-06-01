@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sGh-em-pp0">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="Hzs-ym-Q78">
+            <objects>
+                <viewController id="sGh-em-pp0" customClass="ViewController" customModule="empresarial" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RTa-WU-IJ5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="uYY-Or-rfD">
+                                <rect key="frame" x="16" y="318" width="343" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uBG-Jd-0SY">
+                                        <rect key="frame" x="0.0" y="0.0" width="167.5" height="30"/>
+                                        <state key="normal" title="Limpiar"/>
+                                        <connections>
+                                            <action selector="btn_limpiar:" destination="sGh-em-pp0" eventType="touchUpInside" id="ckQ-sG-fDy"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cv8-fC-fjb">
+                                        <rect key="frame" x="175.5" y="0.0" width="167.5" height="30"/>
+                                        <state key="normal" title="Calcular"/>
+                                        <connections>
+                                            <action selector="btnCal:" destination="sGh-em-pp0" eventType="touchUpInside" id="615-UG-Hfl"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="uTm-CC-kg7" firstAttribute="trailing" secondItem="uYY-Or-rfD" secondAttribute="trailing" constant="16" id="2mI-hU-akA"/>
+                            <constraint firstItem="uYY-Or-rfD" firstAttribute="centerX" secondItem="RTa-WU-IJ5" secondAttribute="centerX" id="X9b-ag-rpY"/>
+                            <constraint firstItem="uYY-Or-rfD" firstAttribute="leading" secondItem="uTm-CC-kg7" secondAttribute="leading" constant="16" id="YPN-Zk-PN8"/>
+                            <constraint firstItem="uYY-Or-rfD" firstAttribute="centerY" secondItem="RTa-WU-IJ5" secondAttribute="centerY" id="rIc-u7-szk"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="uTm-CC-kg7"/>
+                    </view>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="fzl-YV-q61" id="HZh-Nh-XXH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OVQ-fI-buT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="fh5-uo-8Vj">
+                    <connections>
+                        <outlet property="delegate" destination="sGh-em-pp0" id="vbO-7b-ic4"/>
+                        <outlet property="searchContentsController" destination="sGh-em-pp0" id="dnn-z5-XfT"/>
+                        <outlet property="searchResultsDataSource" destination="sGh-em-pp0" id="yxR-cL-TUs"/>
+                        <outlet property="searchResultsDelegate" destination="sGh-em-pp0" id="Wjt-5v-KIc"/>
+                    </connections>
+                </searchDisplayController>
+                <searchDisplayController id="fp4-cL-uaY">
+                    <connections>
+                        <outlet property="delegate" destination="sGh-em-pp0" id="tg8-rO-zmF"/>
+                        <outlet property="searchContentsController" destination="sGh-em-pp0" id="4DS-PX-G4E"/>
+                        <outlet property="searchResultsDataSource" destination="sGh-em-pp0" id="cMN-YO-Dyk"/>
+                        <outlet property="searchResultsDelegate" destination="sGh-em-pp0" id="Qfi-Zw-Soz"/>
+                    </connections>
+                </searchDisplayController>
+                <searchDisplayController id="ifA-A7-uJK">
+                    <connections>
+                        <outlet property="delegate" destination="sGh-em-pp0" id="lI6-j0-8Zh"/>
+                        <outlet property="searchContentsController" destination="sGh-em-pp0" id="15D-Kl-1L5"/>
+                        <outlet property="searchResultsDataSource" destination="sGh-em-pp0" id="ekf-SQ-t6Q"/>
+                        <outlet property="searchResultsDelegate" destination="sGh-em-pp0" id="MoC-2I-rpw"/>
+                    </connections>
+                </searchDisplayController>
+                <searchDisplayController id="fzl-YV-q61">
+                    <connections>
+                        <outlet property="delegate" destination="sGh-em-pp0" id="0DS-gr-dNL"/>
+                        <outlet property="searchContentsController" destination="sGh-em-pp0" id="840-ah-ISg"/>
+                        <outlet property="searchResultsDataSource" destination="sGh-em-pp0" id="bbr-mz-nJt"/>
+                        <outlet property="searchResultsDelegate" destination="sGh-em-pp0" id="4JK-4T-cQk"/>
+                    </connections>
+                </searchDisplayController>
+            </objects>
+            <point key="canvasLocation" x="-66.400000000000006" y="-11.244377811094454"/>
+        </scene>
+    </scenes>
+</document>
